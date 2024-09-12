@@ -1,25 +1,30 @@
 #include "Flight.h"
 #include <iostream>
-#include <vector>
 
 void FlightManager::addFlight(int flightNumber, const std::string& destination, const std::string& date, const std::string& time) {
-    flights.emplace_back(flightNumber, destination, date, time);
+    Flight flight(flightNumber, destination, date, time);
+    flights.push_back(std::move(flight));
     std::cout << "Рейс успешно добавлен!" << std::endl;
 }
 
 void FlightManager::updateFlight(int flightNumber) {
     for (auto& flight : flights) {
         if (flight.getFlightNumber() == flightNumber) {
-            std::string destination, date, time;
+            std::string newDestination;
+            std::string newDate;
+            std::string newTime;
+
             std::cout << "Введите новый пункт назначения: ";
-            std::cin >> destination;
+            std::cin >> newDestination;
             std::cout << "Введите новую дату (DD/YY): ";
-            std::cin >> date;
+            std::cin >> newDate;
             std::cout << "Введите новое время (HH/MM): ";
-            std::cin >> time;
-            flight.setDestination(destination);
-            flight.setDate(date);
-            flight.setTime(time);
+            std::cin >> newTime;
+
+            flight.setDestination(newDestination);
+            flight.setDate(newDate);
+            flight.setTime(newTime);
+
             std::cout << "Данные о рейсе успешно изменены!" << std::endl;
             return;
         }

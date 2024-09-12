@@ -21,7 +21,10 @@ int main() {
         switch (choice) {
         case 1: {
             int flightNumber;
-            std::string destination, date, time;
+            std::string destination;
+            std::string date;
+            std::string time;
+
             std::cout << "¬ведите номер рейса: ";
             std::cin >> flightNumber;
             std::cout << "¬ведите пункт назначени€: ";
@@ -30,27 +33,34 @@ int main() {
             std::cin >> date;
             std::cout << "¬ведите врем€ (HH/MM): ";
             std::cin >> time;
+
             manager.addFlight(flightNumber, destination, date, time);
             break;
         }
         case 2: {
             int flightNumber;
+
             std::cout << "¬ведите номер рейса: ";
             std::cin >> flightNumber;
+
             manager.updateFlight(flightNumber);
             break;
         }
         case 3: {
             int flightNumber;
+
             std::cout << "¬ведите номер рейса: ";
             std::cin >> flightNumber;
+
             manager.deleteFlight(flightNumber);
             break;
         }
         case 4: {
             int flightNumber;
+
             std::cout << "¬ведите номер рейса: ";
             std::cin >> flightNumber;
+
             manager.findFlight(flightNumber);
             break;
         }

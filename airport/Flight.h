@@ -13,9 +13,9 @@ private:
 public:
     Flight(int flightNumber, const std::string& destination, const std::string& date, const std::string& time);
     int getFlightNumber() const;
-    std::string getDestination() const;
-    std::string getDate() const;
-    std::string getTime() const;
+    const std::string& getDestination() const;
+    const std::string& getDate() const;
+    const std::string& getTime() const;
     void setDestination(const std::string& destination);
     void setDate(const std::string& date);
     void setTime(const std::string& time);
@@ -24,7 +24,7 @@ public:
 
 class FlightManager {
 private:
-    std::vector<Flight> flights; // Храним объекты, а не указатели
+    std::vector<Flight> flights;
 public:
     void addFlight(int flightNumber, const std::string& destination, const std::string& date, const std::string& time);
     void updateFlight(int flightNumber);

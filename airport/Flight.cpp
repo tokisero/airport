@@ -1,26 +1,23 @@
 #include "Flight.h"
 #include <iostream>
 
-Flight::Flight(int flightNumber, const std::string& destination, const std::string& date, const std::string& time) {
-    this->flightNumber = flightNumber;
-    this->destination = destination;
-    this->date = date;
-    this->time = time;
+Flight::Flight(int flightNumber, const std::string& destination, const std::string& date, const std::string& time)
+    : flightNumber(flightNumber), destination(destination), date(date), time(time) {
 }
 
 int Flight::getFlightNumber() const {
     return flightNumber;
 }
 
-std::string Flight::getDestination() const {
+const std::string& Flight::getDestination() const {
     return destination;
 }
 
-std::string Flight::getDate() const {
+const std::string& Flight::getDate() const {
     return date;
 }
 
-std::string Flight::getTime() const {
+const std::string& Flight::getTime() const {
     return time;
 }
 
