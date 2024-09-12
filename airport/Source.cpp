@@ -8,13 +8,13 @@ int main() {
     int choice = 0;
 
     do {
-        std::cout << "Меню:" << std::endl;
-        std::cout << "1. Добавить рейс" << std::endl;
-        std::cout << "2. Изменить данные о рейсе" << std::endl;
-        std::cout << "3. Снять рейс" << std::endl;
-        std::cout << "4. Найти рейс" << std::endl;
-        std::cout << "5. Вывести все рейсы" << std::endl;
-        std::cout << "6. Выход" << std::endl;
+        std::cout << "Меню:\n";
+        std::cout << "1. Добавить рейс\n";
+        std::cout << "2. Изменить данные о рейсе\n";
+        std::cout << "3. Снять рейс\n";
+        std::cout << "4. Найти рейс\n";
+        std::cout << "5. Вывести все рейсы\n";
+        std::cout << "6. Выход\n";
         std::cout << "Ваш выбор: ";
         std::cin >> choice;
 

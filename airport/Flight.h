@@ -24,9 +24,8 @@ public:
 
 class FlightManager {
 private:
-    std::vector<Flight*> flights;
+    std::vector<Flight> flights; // Храним объекты, а не указатели
 public:
-    ~FlightManager();
     void addFlight(int flightNumber, const std::string& destination, const std::string& date, const std::string& time);
     void updateFlight(int flightNumber);
     void deleteFlight(int flightNumber);
