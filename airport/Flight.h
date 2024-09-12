@@ -16,9 +16,9 @@ public:
     const std::string& getDestination() const;
     const std::string& getDate() const;
     const std::string& getTime() const;
-    void setDestination(const std::string& destination);
-    void setDate(const std::string& date);
-    void setTime(const std::string& time);
+    void setDestination(const std::string& dest);
+    void setDate(const std::string& dt);
+    void setTime(const std::string& tm);
     void printFlight() const;
 };
 

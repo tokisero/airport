@@ -21,16 +21,16 @@ const std::string& Flight::getTime() const {
     return time;
 }
 
-void Flight::setDestination(const std::string& destination) {
-    this->destination = destination;
+void Flight::setDestination(const std::string& dest) {
+    destination = dest;
 }
 
-void Flight::setDate(const std::string& date) {
-    this->date = date;
+void Flight::setDate(const std::string& dt) {
+    date = dt;
 }
 
-void Flight::setTime(const std::string& time) {
-    this->time = time;
+void Flight::setTime(const std::string& tm) {
+    time = tm;
 }
 
 void Flight::printFlight() const {
